@@ -1,6 +1,8 @@
 'use client';
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Login from './Login';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-base-100 shadow-lg">
-      <div className="container mx-auto px-4 py-2 flex justify-between">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/">
           Build &amp; Share
         </Link>
@@ -31,12 +33,9 @@ export default function Navbar() {
           <Link href="/blog">
             Blog
           </Link>
-          <Link href="/signin">
-            Sign In
-          </Link>
+          <Login />
           <label className="swap swap-rotate">
             <input type="checkbox" className="theme-controller" value="light" onChange={() => setIsdark(!isdark)} checked={!!isdark} />
-
             {/* sun icon */}
             <svg
               className="swap-off h-6 w-6 fill-current"
@@ -122,9 +121,7 @@ export default function Navbar() {
                 <Link href="/blog" className="block text-lg px-4 py-2">
                   Blog
                 </Link>
-                <Link href="/signin" className="btn btn-primary block w-full text-lg px-4 py-2">
-                  Sign In
-                </Link>
+                  <Login />
               </div>
             </div>
           )}
