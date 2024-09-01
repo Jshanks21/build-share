@@ -119,18 +119,20 @@ export default function Login() {
   };
 
   const loggedInView = (
-    <button onClick={logout} className="btn btn-primary md:btn-outline block w-full text-lg px-2 py-0">
+    <button onClick={logout}>
       Log Out
     </button>
   );
 
   const unloggedInView = (
-    <button onClick={login} className="btn btn-primary md:btn-outline block w-full text-lg px-2 py-0">
+    <button onClick={login}>
       Sign In
     </button>
   );
 
   return (
-    <div>{loggedIn ? loggedInView : unloggedInView}</div>
+    <div>
+      {loggedIn ? loggedInView : unloggedInView}
+    </div>
   );
 }

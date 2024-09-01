@@ -55,7 +55,7 @@ export default function Navbar() {
             </svg>
           </label>
         </div>
-        
+
         {/* mobile menu */}
         <div className="md:hidden flex gap-2">
           <label className="swap swap-rotate">
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <Link href="/blog" className="block text-lg px-4 py-2">
                   Blog
                 </Link>
-                  <Login />
+                <Login />
               </div>
             </div>
           )}
